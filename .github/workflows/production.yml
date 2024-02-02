@@ -12,7 +12,7 @@ jobs:
         image: postgres:14-alpine
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: new_password
+          POSTGRES_PASSWORD: 1Vn1CMcBFsDgMtN
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -27,7 +27,7 @@ jobs:
       - name: Create .env file
         run: |
           touch .env
-          echo DATABASE_URL=postgres://https://backend-main.fly.dev/car>> .env
+          echo DATABASE_URL=postgres://postgres:1Vn1CMcBFsDgMtN@backend-main-db.flycast:5432>> .env
       - name: Migrate database
         run: npm run knex migrate:latest && npm run knex seed:run
       - name: Test Coverage
