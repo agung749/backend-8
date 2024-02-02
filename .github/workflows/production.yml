@@ -12,7 +12,7 @@ jobs:
         image: postgres:14-alpine
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: bismillah
+          POSTGRES_PASSWORD: new_password
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
