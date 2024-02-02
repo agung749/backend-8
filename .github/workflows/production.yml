@@ -27,7 +27,7 @@ jobs:
       - name: Create .env file
         run: |
           touch .env
-          echo DATABASE_URL=postgres://postgres:1Vn1CMcBFsDgMtN@backend-main-db.internal:5432>> .env
+          echo DATABASE_URL=postgres://postgres:1Vn1CMcBFsDgMtN@localhost:5432 >> .env
       - name: Migrate database
         run: npm run knex migrate:latest && npm run knex seed:run
       - name: Test Coverage
